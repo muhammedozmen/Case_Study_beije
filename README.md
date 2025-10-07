@@ -13,8 +13,8 @@ This repository contains a full-stack application developed as a case study for 
 
 ### Backend
 - **Framework**: NestJS with TypeScript
-- **Database**: PostgreSQL with Prisma ORM
-- **Features**: User management, product catalog, order processing
+- **Database**: PostgreSQL with TypeORM
+- **Features**: Email verification system, user registration, SendGrid integration
 - **URL**: http://localhost:3000
 
 ## 📦 Quick Start
@@ -46,8 +46,9 @@ npm run start:dev
 ## 🛠 Technologies
 
 - **Frontend**: Next.js, TypeScript, Redux Toolkit, Tailwind CSS
-- **Backend**: NestJS, TypeScript, Prisma, PostgreSQL
-- **Tools**: GitHub Desktop, VS Code
+- **Backend**: NestJS, TypeScript, TypeORM, PostgreSQL
+- **Email**: SendGrid API
+- **Tools**: GitHub Desktop, VS Code, Docker
 
 ## 📝 Case Study Features
 
@@ -55,8 +56,9 @@ npm run start:dev
 - ✅ Global state management
 - ✅ Multi-language support (TR/EN)
 - ✅ Shopping cart functionality
-- ✅ RESTful API
-- ✅ Database integration
+- ✅ Email verification system
+- ✅ RESTful API with Swagger
+- ✅ Database integration with TypeORM
 - ✅ Type safety with TypeScript
 
 ---
