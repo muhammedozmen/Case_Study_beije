@@ -37,11 +37,7 @@ npm run start:dev
 
 - [Frontend Documentation](./frontend/README.md)
 - [Backend Documentation](./backend/README.md)
-
-## 🌐 Live Demo
-
-- **Frontend**: Custom Package Selection Page
-- **Backend**: RESTful API with Swagger documentation
+- [AI Usage Log](https://gist.github.com/muhammedozmen/9ccd19f053ec5d104f6c22162c32df2b) - Detailed Claude/Copilot usage log
 
 ## 🛠 Technologies
 
