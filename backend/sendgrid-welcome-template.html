@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoş Geldiniz!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 300;
+        }
+        .header .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 40px 30px;
+            color: #333333;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .message {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #555555;
+        }
+        .success-badge {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        }
+        .features {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .features h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            color: #555555;
+        }
+        .feature-list li:before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        .cta-section {
+            text-align: center;
+            background-color: #e3f2fd;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #bdc3c7;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+            }
+            .content {
+                padding: 20px !important;
+            }
+            .header {
+                padding: 30px 20px !important;
+            }
+            .cta-button {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+                margin: 10px 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="icon">🎉</div>
+            <h1>Hoş Geldiniz!</h1>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="greeting">
+                Merhaba {{username}},
+            </div>
+
+            <div style="text-align: center;">
+                <div class="success-badge">
+                    ✅ E-posta Doğrulandı!
+                </div>
+            </div>
+
+            <div class="message">
+                <p>Tebrikler! E-posta adresiniz başarıyla doğrulandı ve hesabınız aktifleştirildi.</p>
+                <p>Artık tüm özelliklerimizi kullanmaya başlayabilirsiniz.</p>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features">
+                <h3>🚀 Neler Yapabilirsiniz?</h3>
+                <ul class="feature-list">
+                    <li>Hesabınızı güvenle kullanabilirsiniz</li>
+                    <li>Tüm özelliklere erişim sağlayabilirsiniz</li>
+                    <li>Güvenlik ayarlarınızı yönetebilirsiniz</li>
+                    <li>Bildirim tercihlerinizi düzenleyebilirsiniz</li>
+                </ul>
+            </div>
+
+            <div class="message">
+                <p>Herhangi bir sorunuz varsa veya yardıma ihtiyacınız olursa, destek ekibimizle iletişime geçmekten çekinmeyin.</p>
+                <p>Aramıza hoş geldiniz! 🎊</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>{{app_name}}</strong></p>
+            <p>Bu e-posta otomatik olarak gönderilmiştir. Lütfen yanıtlamayın.</p>
+            
+            <div class="social-links">
+                <a href="#" title="Website">🌐</a>
+                <a href="#" title="Support">📧</a>
+                <a href="#" title="Help">❓</a>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 12px; color: #95a5a6;">
+                <a href="{{{unsubscribe}}}" style="color: #95a5a6;">Abonelikten Çık</a>
+                |
+                <a href="{{{unsubscribe_preferences}}}" style="color: #95a5a6;">E-posta Tercihleri</a>
+            </p>
+            
+            <p style="font-size: 12px; color: #95a5a6; margin-top: 10px;">
+                © 2025 beije. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

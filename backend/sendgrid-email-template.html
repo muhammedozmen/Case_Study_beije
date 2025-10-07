@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-posta Doğrulama</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 300;
+        }
+        .header .icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 40px 30px;
+            color: #333333;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .message {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #555555;
+        }
+        .verify-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+        .verify-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        .alternative-link {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .alternative-link p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            color: #666666;
+        }
+        .alternative-link a {
+            color: #667eea;
+            word-break: break-all;
+            text-decoration: none;
+        }
+        .security-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 30px 0;
+        }
+        .security-note p {
+            margin: 0;
+            font-size: 14px;
+            color: #856404;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #bdc3c7;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                width: 100% !important;
+            }
+            .content {
+                padding: 20px !important;
+            }
+            .header {
+                padding: 30px 20px !important;
+            }
+            .verify-button {
+                display: block !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="icon">✉️</div>
+            <h1>E-posta Doğrulama</h1>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="greeting">
+                Merhaba {{username}},
+            </div>
+
+            <div class="message">
+                <p>Hesabınızı oluşturduğunuz için teşekkür ederiz! E-posta adresinizi doğrulayarak hesabınızı aktifleştirin.</p>
+                <p>Aşağıdaki butona tıklayarak doğrulama işlemini tamamlayabilirsiniz:</p>
+            </div>
+
+            <!-- Verify Button -->
+            <div style="text-align: center;">
+                <a href="{{verification_link}}" class="verify-button">
+                    E-postamı Doğrula
+                </a>
+            </div>
+
+            <!-- Alternative Link -->
+            <div class="alternative-link">
+                <p><strong>Buton çalışmıyor mu?</strong></p>
+                <p>Aşağıdaki linki kopyalayıp tarayıcınızın adres çubuğuna yapıştırın:</p>
+                <a href="{{verification_link}}">{{verification_link}}</a>
+            </div>
+
+            <!-- Security Note -->
+            <div class="security-note">
+                <p><strong>🔒 Güvenlik Notu:</strong> Bu doğrulama linki 24 saat geçerlidir. Eğer bu e-postayı siz talep etmediyseniz, güvenle göz ardı edebilirsiniz.</p>
+            </div>
+
+            <div class="message">
+                <p>Herhangi bir sorunuz varsa, bizimle iletişime geçmekten çekinmeyin.</p>
+                <p>İyi günler!</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>{{app_name}}</strong></p>
+            <p>Bu e-posta otomatik olarak gönderilmiştir. Lütfen yanıtlamayın.</p>
+            
+            <div class="social-links">
+                <a href="#" title="Website">🌐</a>
+                <a href="#" title="Support">📧</a>
+                <a href="#" title="Help">❓</a>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 12px; color: #95a5a6;">
+                <a href="{{{unsubscribe}}}" style="color: #95a5a6;">Abonelikten Çık</a>
+                |
+                <a href="{{{unsubscribe_preferences}}}" style="color: #95a5a6;">E-posta Tercihleri</a>
+            </p>
+            
+            <p style="font-size: 12px; color: #95a5a6; margin-top: 10px;">
+                © 2025 beije. Tüm hakları saklıdır.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
